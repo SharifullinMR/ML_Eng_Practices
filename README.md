@@ -13,7 +13,7 @@
 ## Установка
 
 ```bash
-git clone https://github.com/USERNAME/ml-project.git
+git clone https://github.com/SharifullinMR/ml-project.git
 cd ml-project
 uv sync
 ```
@@ -26,23 +26,23 @@ uv sync
 uv run python -m src.get_data
 ```
 
-Скачивает архив, распаковывает `data/raw/winequality-red.csv`
-и проверяет файл (1599 строк, 12 колонок).
+Скачиваетcя архив, конечный распакованный файл в  `data/raw/winequality-red.csv`
+и проверяется файл (1599 строк, 12 колонок).
 
-## Проверка кода командами(если нужно)
+## Проверка кода командами(если нужно после коммита или он настроен автоматически сам с git commit)
 
 ```bash
 uv run pre-commit run --all-files
 uv run ruff check .
 ```
 
-## Обучение
+## Обучение ML модели и её сохранение
 
 ```bash
 uv run python -m src.train
 ```
 
-Сохранение модели и метрик
+Сохраненные модели и метрики
 - `artifacts/model.pkl`  модель (StandardScaler + LogisticRegression)
 - `artifacts/metrics.json`метрики текущего запуска (accuracy, F1, ROC AUC)
 
