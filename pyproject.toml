@@ -1,0 +1,23 @@
+[project]
+name = "ml-project"
+version = "0.1.0"
+description = "ML project (HW-1)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "joblib>=1.4",
+    "pandas>=2.2",
+    "scikit-learn>=1.6",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
