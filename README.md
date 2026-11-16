@@ -50,6 +50,23 @@ uv run python -m src.train
 - `artifacts/model.pkl`  модель (StandardScaler + LogisticRegression)
 - `artifacts/metrics.json`метрики текущего запуска (accuracy, F1, ROC AUC)
 
+## Последовательность команд для проверки проекта:
+```bash
+cd %USERPROFILE%
+git clone https://github.com/USERNAME/ml-project.git ML-project-check
+cd ML-project-check
+uv sync
+uv run python -m src.get_data
+uv run python -m src.train
+```
+
+### Если все отработало без ошибок, то можно удалить за собой:
+```bash
+cd %USERPROFILE%
+rmdir /s /q ML-project-check
+```
+
+
 ## Структура всего проекта
 
 ```
